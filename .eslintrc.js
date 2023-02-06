@@ -24,7 +24,7 @@ module.exports = {
         {
             "files" : ["**/*.js"],
             "rules":{
-                "no-console": "off",
+                // "no-console": "off",
                 "no-unused-vars": "off"
             }
         },
@@ -52,6 +52,7 @@ module.exports = {
             "jsx" : true//jsx 사용
         }
     },
+    "ignorePatterns": ["**/ignore*.js"],
     "parser" : "Espree",
     "plugins": [
         "react",

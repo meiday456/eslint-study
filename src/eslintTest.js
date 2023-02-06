@@ -18,8 +18,8 @@ if (111 === 111) {
 //eslint-disable-next-line
 console.log("never")
 
-
 console.log("never")/*eslint-disable-line*/
+console.log("never")//eslint-disable-line
 
 /*eslint-disable-next-line*/
 console.log("never")
