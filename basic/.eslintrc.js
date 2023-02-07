@@ -13,6 +13,9 @@ module.exports = {
     "plugin:react/recommended",
     "plugin:switch-case/recommended",
     "plugin:markdown/recommended",
+    "plugin:prettier/recommended",
+    "eslint-config-prettier",
+    "prettier",
     //plugin의 rule를 하나하나 지정해서 사용하기 번거롭기 때문에
     //이처럼 plugin에서는 recommended 로 extends 할 수 있게 제공한다.
   ],
@@ -66,7 +69,7 @@ module.exports = {
     // indent: ["error", 4],
     "linebreak-style": ["error", "unix"],
     quotes: ["error", "double"],
-    semi: ["error", "never"],
+    // semi: ["error", "never"],
     "no-empty": "warn",
     "init-declarations": "off",
     "no-console": "error",
