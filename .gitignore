@@ -133,3 +133,7 @@ dist
 
 **/.DS_Store
 **/node_modules
+
+/typescript/node_modules
+/basic/node_modules
+/custom/node_modules
