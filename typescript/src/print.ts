@@ -1,3 +1,3 @@
-import show from './index'
+import show from "./index";
 
-show()
+show();

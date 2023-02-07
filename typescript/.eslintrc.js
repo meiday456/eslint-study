@@ -1,8 +1,10 @@
+const path = require('path')
+
 module.exports = {
     root: true,
     env: {
         browser: true,
-        es2021: true,
+        es6: true,
         node: true
     },
     parser: '@typescript-eslint/parser',
@@ -13,14 +15,17 @@ module.exports = {
         'plugin:@typescript-eslint/recommended-requiring-type-checking',
         "plugin:@typescript-eslint/strict",
         'standard-with-typescript',
+        "plugin:prettier/recommended",
+        "eslint-config-prettier",
+        "prettier"
     ],
     overrides: [
-        // {
-        //     files: ["**/*.ts", "**/*.tsx"],
-        //     rules: {
-        //         "indent": ["error", 4]
-        //     },
-        // }
+        {
+            files: ['*.ts', '*.mts', '*.cts', '*.tsx'],
+            rules: {
+                'no-undef': 'off',
+            },
+        },
     ],
     parserOptions: {
         sourceType: 'module',
@@ -32,6 +37,7 @@ module.exports = {
         ecmaVersion: '2020',
         project: ['./tsconfig.json'],
         tsconfigRootDir: __dirname,
+        // projectFolderIgnoreList :["webpack.config.js"]
     },
     plugins: [
         '@typescript-eslint',
@@ -48,8 +54,11 @@ module.exports = {
         "import/resolver": {
             "node": {
                 "extensions": [".js", ".jsx", ".ts", ".tsx"]
-            }
-        }
+            },
+            // webpack: {
+            //     config: path.join(__dirname,  'webpack.config.js'),
+            // },
+        },
     },
-    ignorePatterns: ['.eslintrc.js']
+    ignorePatterns: ['.eslintrc.js' ]
 }
